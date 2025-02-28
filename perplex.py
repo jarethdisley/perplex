@@ -89,6 +89,7 @@ def build_map(movies, dest,printDoubles, directoryToRunOn = "" ,mapping=[] ):
 
     for title, year, files in list(movies.values()):
         counter = 0;
+        print(title)
         for i, old_name in enumerate(files):
             modifyedDirectory = str(directoryToRunOn).replace("\\", "/")
             modifyedOldName = str(old_name).replace("\\", "/")
