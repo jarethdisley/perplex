@@ -101,7 +101,8 @@ def build_map(movies, dest,printDoubles, directoryToRunOn = "" ,mapping=[] ):
                 print_doubles(files)
             _, ext = os.path.splitext(old_name)
 
-            template = "%s (%s)/%s (%s)" % (title, year, title, year)
+            #template = f"{title} ({year})/{title} ({year})"
+            template = f"{title} ({year})"
             template += " - part%d" % (i + 1) if len(files) > 1 else ""
             template += ext
 
