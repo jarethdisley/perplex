@@ -88,11 +88,13 @@ def build_map(movies, dest,printDoubles, directoryToRunOn = "" ,mapping=[] ):
     """ Build mapping to new names """
 
     for title, year, files in list(movies.values()):
-        counter = 0;
-        print(title)
+        counter = 0
         for i, old_name in enumerate(files):
             modifyedDirectory = str(directoryToRunOn).replace("\\", "/")
             modifyedOldName = str(old_name).replace("\\", "/")
+
+            print(modifyedDirectory)
+
             if modifyedDirectory != "" and not str(modifyedOldName).__contains__(modifyedDirectory):
                 print("skipping file because not in given directory " + old_name)
                 continue
