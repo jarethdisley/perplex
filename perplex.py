@@ -94,6 +94,8 @@ def build_map(movies, dest,printDoubles, directoryToRunOn = "" ,mapping=[] ):
             modifyedOldName = str(old_name).replace("\\", "/")
 
             print(modifyedDirectory)
+            print(old_name)
+            print(modifyedOldName)
 
             if modifyedDirectory != "" and not str(modifyedOldName).__contains__(modifyedDirectory):
                 print("skipping file because not in given directory " + old_name)
